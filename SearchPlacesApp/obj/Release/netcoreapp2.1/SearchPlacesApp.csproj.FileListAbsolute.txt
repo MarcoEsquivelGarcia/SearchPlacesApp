@@ -1,0 +1,15 @@
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\obj\Release\netcoreapp2.1\SearchPlacesApp.csprojAssemblyReference.cache
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\obj\Release\netcoreapp2.1\SearchPlacesApp.csproj.CoreCompileInputs.cache
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\obj\Release\netcoreapp2.1\SearchPlacesApp.RazorAssemblyInfo.cache
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\bin\Release\netcoreapp2.1\SearchPlacesApp.deps.json
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\bin\Release\netcoreapp2.1\SearchPlacesApp.runtimeconfig.json
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\bin\Release\netcoreapp2.1\SearchPlacesApp.runtimeconfig.dev.json
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\bin\Release\netcoreapp2.1\SearchPlacesApp.dll
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\bin\Release\netcoreapp2.1\SearchPlacesApp.pdb
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\obj\Release\netcoreapp2.1\SearchPlacesApp.RazorAssemblyInfo.cs
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\obj\Release\netcoreapp2.1\SearchPlacesApp.AssemblyInfoInputs.cache
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\obj\Release\netcoreapp2.1\SearchPlacesApp.AssemblyInfo.cs
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\obj\Release\netcoreapp2.1\SearchPlacesApp.RazorTargetAssemblyInfo.cache
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\obj\Release\netcoreapp2.1\SearchPlacesApp.dll
+C:\Users\Marco_2\Documents\GitHub\SearchPlacesApp\SearchPlacesApp\obj\Release\netcoreapp2.1\SearchPlacesApp.pdb
