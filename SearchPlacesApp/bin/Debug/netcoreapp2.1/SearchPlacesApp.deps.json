@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "24cd1867e225a4af12e575e43fe368944867823c"
+    "signature": "ea082695148fc0209325af90fccbc70d6536edd2"
   },
   "compilationOptions": {
     "defines": [
@@ -31,7 +31,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6",
           "Microsoft.EntityFrameworkCore.Tools": "2.1.11",
           "Microsoft.NETCore.App": "2.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.1"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.1",
+          "ZNetCS.AspNetCore.Authentication.Basic": "3.0.0"
         },
         "runtime": {
           "SearchPlacesApp.dll": {}
@@ -692,6 +693,25 @@
           "System.Reflection.Extensions": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "ZNetCS.AspNetCore.Authentication.Basic/3.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "2.1.1",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Logging": "2.1.1",
+          "Microsoft.Extensions.Options": "2.1.1",
+          "Microsoft.Net.Http.Headers": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ZNetCS.AspNetCore.Authentication.Basic.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/ZNetCS.AspNetCore.Authentication.Basic.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3812,6 +3832,13 @@
       "sha512": "sha512-Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
+    },
+    "ZNetCS.AspNetCore.Authentication.Basic/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6hJobvld1WmLwieuUelQyaEGy3bmp0ij5jzmxh3pL4UZBU05IvR4luGErIJklJbl3DpCg1qSCgtubBdYuykDLA==",
+      "path": "znetcs.aspnetcore.authentication.basic/3.0.0",
+      "hashPath": "znetcs.aspnetcore.authentication.basic.3.0.0.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

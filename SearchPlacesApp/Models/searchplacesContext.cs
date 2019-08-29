@@ -14,7 +14,7 @@ namespace SearchPlacesApp.Models
             : base(options)
         {
         }
-
+        public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Establishment> Establishment { get; set; }
 
@@ -29,6 +29,17 @@ namespace SearchPlacesApp.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Users>(entity =>
+            {
+                entity.Property(e => e.Username)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+                entity.Property(e => e.Password)
+                   .IsRequired()
+                   .HasMaxLength(50)
+                   .IsUnicode(false);
+            });
             modelBuilder.Entity<Category>(entity =>
             {
                 entity.Property(e => e.CategoryType)

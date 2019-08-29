@@ -4642,6 +4642,23 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "ZNetCS.AspNetCore.Authentication.Basic/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "2.0.1",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0",
+          "Microsoft.Net.Http.Headers": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/ZNetCS.AspNetCore.Authentication.Basic.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ZNetCS.AspNetCore.Authentication.Basic.dll": {}
+        }
       }
     }
   },
@@ -12577,6 +12594,21 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "ZNetCS.AspNetCore.Authentication.Basic/3.0.0": {
+      "sha512": "6hJobvld1WmLwieuUelQyaEGy3bmp0ij5jzmxh3pL4UZBU05IvR4luGErIJklJbl3DpCg1qSCgtubBdYuykDLA==",
+      "type": "package",
+      "path": "znetcs.aspnetcore.authentication.basic/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/ZNetCS.AspNetCore.Authentication.Basic.dll",
+        "lib/net461/ZNetCS.AspNetCore.Authentication.Basic.xml",
+        "lib/netstandard2.0/ZNetCS.AspNetCore.Authentication.Basic.dll",
+        "lib/netstandard2.0/ZNetCS.AspNetCore.Authentication.Basic.xml",
+        "znetcs.aspnetcore.authentication.basic.3.0.0.nupkg.sha512",
+        "znetcs.aspnetcore.authentication.basic.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -12588,7 +12620,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer.Design >= 1.1.6",
       "Microsoft.EntityFrameworkCore.Tools >= 2.1.11",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
+      "ZNetCS.AspNetCore.Authentication.Basic >= 3.0.0"
     ]
   },
   "packageFolders": {
@@ -12669,6 +12702,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[2.1.1, )"
+          },
+          "ZNetCS.AspNetCore.Authentication.Basic": {
+            "target": "Package",
+            "version": "[3.0.0, )"
           }
         },
         "imports": [

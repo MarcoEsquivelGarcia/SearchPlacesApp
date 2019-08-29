@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SearchPlacesApp.Models;
+using SearchPlacesApp.Security;
 
 namespace SearchPlacesApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class PlacesController : ControllerBase
     {
         private readonly searchplacesContext context = new searchplacesContext();
@@ -25,13 +29,23 @@ namespace SearchPlacesApp.Controllers
         [HttpGet("{GetFiltered}")]
         public async Task<IActionResult> GetFiltered([FromBody] filterestablishments request)
         {
-            var catego = from cat in context.Category
-                         join  e in context.Establishment on cat.Id equals e.IdCategory
-                         where cat.CategoryType.Contains(request.CategoryType) && e.Distancia<=request.Distancia
-                         select e;
-            return Ok(catego.ToList());
+            var sesion = HttpContext.Session.GetString("JWToken");
+            if(sesion!=null)
+            {
+                var catego = from cat in context.Category
+                             join e in context.Establishment on cat.Id equals e.IdCategory
+                             where cat.CategoryType.Contains(request.CategoryType) && e.Distancia <= request.Distancia
+                             select e;
+                return Ok(catego.ToList());
+            }
+            else
+            {
+                return Unauthorized();
+            }
+           
+            
         }
-
+        
         // POST api/values
         [HttpPost]
         public void Post([FromBody] string value)
