@@ -13,6 +13,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { HttpClient } from 'selenium-webdriver/http';
 import { LoginService } from './login.service';
 import { SearchplacesService } from './searchplaces-service.service';
+import { Ng5SliderModule } from 'ng5-slider';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { SearchplacesService } from './searchplaces-service.service';
     HttpClientModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()      
+    ModalModule.forRoot(),
+    Ng5SliderModule      
   ],
   providers: [LoginService,SearchplacesService],
   bootstrap: [AppComponent]

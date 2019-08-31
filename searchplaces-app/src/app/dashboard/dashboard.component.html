@@ -1,25 +1,26 @@
 <div class="container" style="padding-top:60px;">  
   <div class="row d-flex">  
-    <div class="col-md-8 mx-auto">  
+    <div class=" col-md-9 mx-auto">  
       <div class="card-group">  
-        <div class="card p-8">  
-          <div class="card-body">  
+        <div class="card ">  
+          <div class="card-body" >  
             <form name="form" (ngSubmit)="search()" #f="ngForm">   
               <h1 style="text-align:center">Search Places</h1>  
                
               <div class="form-inline ">  
-                <div class="col-md-4 form-group">  
+                <div class="form-group col-md-6">  
                   
-                  <input style="position:relative;" type="text" name="CategoryType" [(ngModel)]="model.CategoryType" class="form-control sty1" placeholder="enter place to search" required>  
-                  <span style="position:absolute; right:23px;top:12px;" class="fa fa-search "></span>
+                  <input  type="text" name="CategoryType" [(ngModel)]="model.CategoryType"
+                          class="form-control col-md-12 sty1" placeholder="enter place to search" required>  
+                
                 </div>  
-                <div class="col-md-6 form-group"> 
-                  <label for="Distancia">Distancia:</label>
-                    
-                    <input  type="number" name="Distancia" [(ngModel)]="model.Distancia" class="form-control">  
+                <div class="d-flex flex-row col-md-4 "> 
+                  <label >Distancia en Km:</label>
+                  <ng5-slider [(value)]="value" [options]="options"></ng5-slider>
+                  
                   
                 </div>
-                <div class="col-md-1 form-group"> 
+                <div class="form-group"> 
                   <button type="submit" class="btn btn-primary px-4">Search</button>  
                  </div>
               </div>
