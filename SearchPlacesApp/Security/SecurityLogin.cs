@@ -35,8 +35,8 @@ namespace SearchPlacesApp.Security
                           ("YourKey-2374-OFFKDI940NG7:56753253-tyuw-5769-0921-kfirox29zoxv");
                 //Generate Token for user 
                 var JWToken = new JwtSecurityToken(
-                    issuer: "https://localhost:44380/",
-                    audience: "https://localhost:44380/",
+                    //issuer: "http://searchplacesapi.azurewebsites.net/",//https://localhost:44380/",
+                    //audience: "http://searchplacesapi.azurewebsites.net/",//https://localhost:44380/",
                     claims: GetUserClaims(user),
                     notBefore: new DateTimeOffset(DateTime.Now).DateTime,
                     expires: new DateTimeOffset(DateTime.Now.AddDays(1)).DateTime,

@@ -13,7 +13,7 @@ namespace SearchPlacesApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class PlacesController : ControllerBase
     {
         private readonly searchplacesContext context = new searchplacesContext();
@@ -27,25 +27,25 @@ namespace SearchPlacesApp.Controllers
         }
         
         [HttpGet("{GetFiltered}")]
-        public async Task<IActionResult> GetFiltered([FromBody] filterestablishments request)
+        public async Task<IActionResult> GetFiltered([FromQuery] filterestablishments request)
         {
-            var sesion = HttpContext.Session.GetString("JWToken");
-            if(sesion!=null)
-            {
+            //var sesion = HttpContext.Session.GetString("JWToken");
+            //if (sesion != null)
+            //{
                 var catego = from cat in context.Category
                              join e in context.Establishment on cat.Id equals e.IdCategory
-                             where cat.CategoryType.Contains(request.CategoryType) && e.Distancia <= request.Distancia
+                             where cat.CategoryType.Contains(request.CategoryType) && e.Distancia <= Convert.ToInt32(request.Distancia)
                              select e;
                 return Ok(catego.ToList());
-            }
-            else
-            {
-                return Unauthorized();
-            }
-           
-            
+            //}
+            //else
+            //{
+            //    return Unauthorized();
+            //}
+
+
         }
-        
+
         // POST api/values
         [HttpPost]
         public void Post([FromBody] string value)

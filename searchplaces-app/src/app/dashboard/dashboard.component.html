@@ -1,0 +1,56 @@
+<div class="container" style="padding-top:60px;">  
+  <div class="row d-flex">  
+    <div class="col-md-8 mx-auto">  
+      <div class="card-group">  
+        <div class="card p-8">  
+          <div class="card-body">  
+            <form name="form" (ngSubmit)="search()" #f="ngForm">   
+              <h1 style="text-align:center">Search Places</h1>  
+               
+              <div class="form-inline ">  
+                <div class="col-md-4 form-group">  
+                  
+                  <input style="position:relative;" type="text" name="CategoryType" [(ngModel)]="model.CategoryType" class="form-control sty1" placeholder="enter place to search" required>  
+                  <span style="position:absolute; right:23px;top:12px;" class="fa fa-search "></span>
+                </div>  
+                <div class="col-md-6 form-group"> 
+                  <label for="Distancia">Distancia:</label>
+                    
+                    <input  type="number" name="Distancia" [(ngModel)]="model.Distancia" class="form-control">  
+                  
+                </div>
+                <div class="col-md-1 form-group"> 
+                  <button type="submit" class="btn btn-primary px-4">Search</button>  
+                 </div>
+              </div>
+            <br>
+              <div class="row d-flex ">  
+                    <div *ngFor="let place of places">
+                      
+                        
+                              <div class="card-group">  
+                                  <div class="card" style="width: 16rem;">
+                                      <img class="card-img-top" src="{{place.imgUrl}}" style="width:254px;height:250px;" alt="Card image cap">
+                                      <div class="card-body">
+                                        <h5 class="card-title">{{place.nombre}}</h5>
+                                        <p class="card-text">{{place.direccion}}</p>
+                                        <p class="card-text">Distancia {{place.distancia}} Km</p>
+                                      </div>
+                                  </div>
+                                </div>
+                    </div>
+               </div>
+              <div>  
+                  <p style="color:#E92626;font-size:20px;font-weight:normal" Class="success" align="left">  
+                    {{errorMessage}}  
+                  </p>  
+                </div>  
+              
+                
+            </form>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>  
