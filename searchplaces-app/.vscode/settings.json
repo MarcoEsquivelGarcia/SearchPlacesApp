@@ -1,5 +1,6 @@
 {
     "appService.zipIgnorePattern": [
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.showBuildDuringDeployPrompt": false
 }

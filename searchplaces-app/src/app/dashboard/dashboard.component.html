@@ -6,13 +6,17 @@
           <div class="card-body" >  
             <form name="form" (ngSubmit)="search()" #f="ngForm">   
               <h1 style="text-align:center">Search Places</h1>  
-               
+              <div class="form-group col-md-6">  
+                  <div class="alert alert-danger" 
+                    *ngIf="CategoryType.touched && !CategoryType.valid">Enter a place to search</div>
+              </div>
               <div class="form-inline ">  
                 <div class="form-group col-md-6">  
                   
-                  <input  type="text" name="CategoryType" [(ngModel)]="model.CategoryType"
+                  <input  type="text" #CategoryType="ngModel" 
+                           name="CategoryType" [(ngModel)]="model.CategoryType"
                           class="form-control col-md-12 sty1" 
-                          placeholder="enter place to search" required>  
+                          placeholder="enter place to search" required ngModel>  
                 
                 </div>  
                 <div class="d-flex flex-row col-md-4 "> 
@@ -24,7 +28,7 @@
                   
                 </div>
                 <div class="form-group"> 
-                  <button type="submit" class="btn btn-primary px-4">Search</button>  
+                  <button type="submit" [disabled]="!f.valid" class="btn btn-primary px-4">Search</button>  
                  </div>
               </div>
             <br>

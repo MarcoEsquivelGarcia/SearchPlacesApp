@@ -14,6 +14,7 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { LoginService } from './login.service';
 import { SearchplacesService } from './searchplaces-service.service';
 import { Ng5SliderModule } from 'ng5-slider';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { Ng5SliderModule } from 'ng5-slider';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
