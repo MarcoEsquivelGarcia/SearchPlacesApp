@@ -15,6 +15,15 @@ namespace SearchPlacesApp.Controllers
 
     public class LoginController : ControllerBase
     {
+
+        // GET: api/test
+        [EnableCors("CorsPolicy")]
+        [HttpGet]
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "value1", "value2" };
+        }
+
         [EnableCors("CorsPolicy")]
         [HttpPost]
         public async Task<IActionResult> VerifyToken(Users users)
