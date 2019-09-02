@@ -36,7 +36,7 @@ namespace SearchPlacesApp.Controllers
                              join e in context.Establishment on cat.Id equals e.IdCategory
                              where cat.CategoryType.Contains(request.CategoryType) && e.Distancia <= Convert.ToInt32(request.Distancia)
                              select e;
-                return Ok(await catego.ToListAsync());
+                return Ok(catego.ToListAsync());
             }
             else
             {
