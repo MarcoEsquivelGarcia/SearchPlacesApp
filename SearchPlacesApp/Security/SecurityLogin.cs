@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using SearchPlacesApp.Models;
 using System;
@@ -19,7 +20,7 @@ namespace SearchPlacesApp.Security
         {
             //Get user details for the user who is trying to login
             var user = context.Users.FirstOrDefault(x => x.Username == username && x.Password==password);
-
+           
             //Authenticate User, Check if it’s a registered user in Database
             if (user == null)
                 return null;

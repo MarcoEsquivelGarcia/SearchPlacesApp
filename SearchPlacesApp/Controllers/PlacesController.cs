@@ -23,7 +23,7 @@ namespace SearchPlacesApp.Controllers
         {
             var catego = from cat in context.Category
                          select cat;
-            return Ok(catego.ToList());
+            return Ok(await catego.ToListAsync());
         }
         
         [HttpGet("{GetFiltered}")]
@@ -36,7 +36,7 @@ namespace SearchPlacesApp.Controllers
                              join e in context.Establishment on cat.Id equals e.IdCategory
                              where cat.CategoryType.Contains(request.CategoryType) && e.Distancia <= Convert.ToInt32(request.Distancia)
                              select e;
-                return Ok(catego.ToList());
+                return Ok(await catego.ToListAsync());
             }
             else
             {
