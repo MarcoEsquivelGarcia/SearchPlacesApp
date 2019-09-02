@@ -29,19 +29,19 @@ namespace SearchPlacesApp.Controllers
         [HttpGet("{GetFiltered}")]
         public async Task<IActionResult> GetFiltered([FromQuery] filterestablishments request)
         {
-            //var sesion = HttpContext.Session.GetString("JWToken");
-            //if (sesion != null)
-            //{
+            var sesion = HttpContext.Session.GetString("JWToken");
+            if (sesion != null)
+            {
                 var catego = from cat in context.Category
                              join e in context.Establishment on cat.Id equals e.IdCategory
                              where cat.CategoryType.Contains(request.CategoryType) && e.Distancia <= Convert.ToInt32(request.Distancia)
                              select e;
                 return Ok(catego.ToList());
-            //}
-            //else
-            //{
-            //    return Unauthorized();
-            //}
+            }
+            else
+            {
+                return Unauthorized();
+            }
 
 
         }
